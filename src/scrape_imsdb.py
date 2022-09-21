@@ -26,6 +26,7 @@ class ImsdbScraper(scrapy.Spider):
         script_titles = [re.search(r'title=".+?"', line) for line in script_all_info]
         script_titles = [match.group(0) [7:-8] for match in script_titles]
 
+        #TODO: fix date parsing for cases like "While She Was Out" where date is "2006-12 Fifth"
         script_dates = [re.search(r'</a>.+?<br>', line) for line in script_all_info]
         script_dates = [match.group(0)[6:-11] for match in script_dates]
 
@@ -49,14 +50,14 @@ class ImsdbScraper(scrapy.Spider):
     
 
     def parse_script_page(self, response):
-        raw_text = BeautifulSoup(response.text, 'html.parser').get_text()
+        raw_text = BeautifulSoup(response.text, 'html.parser').get_text().replace('\t', ' '*4)
 
         script_item = MovieScript()
         script_item['title'] = response.meta['title']
         script_item['date'] = response.meta['date']
         script_item['writers'] = response.meta['writers'].split(',')
-        script_item['raw_script'] = raw_text
-
+        script_item['raw_script'] = re.split(r'\r\n|\n', raw_text)
+        
         return script_item
 
     
