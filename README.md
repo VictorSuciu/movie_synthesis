@@ -1,15 +1,8 @@
 # Movie Synthesis Project
-
-
-## Scrapy
-
-```scrapy runspider scrape_imsdb.py -o imsdb.jl```
+Using [scriptbase dataset](https://github.com/EdinburghNLP/scriptbase)
 
 ## Parse IMSDB Scripts
 
-```
-python parse_scripts.py /Users/victorsuciu/Wisconsin/fall_2022_courses/image_synthesis/movie_synthesis/src/imsdb.jl -wi 22 -wd /Users/victorsuciu/Wisconsin/fall_2022_courses/image_synthesis/movie_synthesis/src
-```
+```python src/parse_scripts.py /path/to/scriptbase_dir```
 
-```python parse_scripts.py /Users/victorsuciu/Wisconsin/fall_2022_courses/image_synthesis/movie_synthesis/src/imsdb.jl -p -pi 102```
-
+The scrapy webscraper is no longer used
