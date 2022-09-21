@@ -3,9 +3,9 @@
 Goal: Movie script to movie video.
 
 ## Datasets
-[ScriptBase dataset](https://github.com/EdinburghNLP/scriptbase) contains text movie scripts
+[ScriptBase dataset](https://github.com/EdinburghNLP/scriptbase) contains text movie scripts from IMSDB, an online dataset of scripts.
 
-[Condensed Movies dataset](https://github.com/m-bain/CondensedMovies) contains movie video clilps, some with subtitle information.
+[Condensed Movies dataset](https://github.com/m-bain/CondensedMovies) contains movie video clips from youtube, some with subtitle information.
 
 ## Parse IMSDB Scripts
 
