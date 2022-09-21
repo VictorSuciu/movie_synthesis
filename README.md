@@ -1,5 +1,10 @@
 # Movie Synthesis Project
-Using [scriptbase dataset](https://github.com/EdinburghNLP/scriptbase)
+
+Goal: Movie script to movie video.
+
+## Datasets
+[ScriptBase dataset](https://github.com/EdinburghNLP/scriptbase) contains text movie scripts
+[Condensed Movies dataset](https://github.com/m-bain/CondensedMovies) contains movie video clilps, some with subtitle information.
 
 ## Parse IMSDB Scripts
 
